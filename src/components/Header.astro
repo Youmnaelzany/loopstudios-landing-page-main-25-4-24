@@ -1,0 +1,123 @@
+---
+import "@/styles/globals.css";
+---
+
+<header class="xl:flex xl:items-center xl:justify-between">
+  <div class="flex items-center justify-between px-6">
+    <img src="/images/logo.svg" alt="logo" class="w-[9rem]" />
+    <button type="button" class="xl:hidden">
+      <img
+        src="/images/icon-hamburger.svg"
+        alt="menuBtn"
+        class=""
+        id="menuBtn"
+      />
+    </button>
+  </div>
+  <nav
+    class="absolute top-0 hidden h-[41.6875rem] w-[23.4375rem] flex-col gap-[9.94rem] bg-[#000] px-6 pt-10 xl:bg-transparent"
+    id="menuList"
+  >
+    <div class="flex items-center justify-between xl:hidden">
+      <img src="/images/logo.svg" alt="" class="" />
+      <button type="button" class="" id="closeBtn">
+        <img src="/images/icon-close.svg" alt="closeIcon" class="" />
+      </button>
+    </div>
+    <ul
+      class="flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between xl:gap-8"
+    >
+      <li class="">
+        <a
+          href=""
+          class="font-Josefin-Sans text-2xl font-light uppercase leading-[1.5625rem] text-[#fff]"
+          >About</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="font-Josefin-Sans text-2xl font-light uppercase leading-[1.5625rem] text-[#fff]"
+          >Careers</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="font-Josefin-Sans text-2xl font-light uppercase leading-[1.5625rem] text-[#fff]"
+          >Events</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="font-Josefin-Sans text-2xl font-light uppercase leading-[1.5625rem] text-[#fff]"
+          >Products</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="font-Josefin-Sans text-2xl font-light uppercase leading-[1.5625rem] text-[#fff]"
+          >Support</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <!-- Desctop -->
+  <nav class="hidden xl:flex">
+    <ul class="flex items-center justify-between gap-8">
+      <li class="">
+        <a
+          href=""
+          class="relative font-Alata text-[0.9375rem] font-normal leading-[1.5625rem] text-[#fff] after:hover:absolute after:hover:-bottom-2 after:hover:right-2 after:hover:h-[0.125rem] after:hover:w-[1.5rem] after:hover:bg-[#fff]"
+          >About</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="relative font-Alata text-[0.9375rem] font-normal leading-[1.5625rem] text-[#fff] after:hover:absolute after:hover:-bottom-2 after:hover:right-3 after:hover:h-[0.125rem] after:hover:w-[1.5rem] after:hover:bg-[#fff]"
+          >Careers</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="relative font-Alata text-[0.9375rem] font-normal leading-[1.5625rem] text-[#fff] after:hover:absolute after:hover:-bottom-2 after:hover:right-2 after:hover:h-[0.125rem] after:hover:w-[1.5rem] after:hover:bg-[#fff]"
+          >Events</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="relative font-Alata text-[0.9375rem] font-normal leading-[1.5625rem] text-[#fff] after:hover:absolute after:hover:-bottom-2 after:hover:right-4 after:hover:h-[0.125rem] after:hover:w-[1.5rem] after:hover:bg-[#fff]"
+          >Products</a
+        >
+      </li>
+      <li class="">
+        <a
+          href=""
+          class="relative font-Alata text-[0.9375rem] font-normal leading-[1.5625rem] text-[#fff] after:hover:absolute after:hover:-bottom-2 after:hover:right-4 after:hover:h-[0.125rem] after:hover:w-[1.5rem] after:hover:bg-[#fff]"
+          >Support</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script is="inline">
+  const menuBtn = document.getElementById("menuBtn");
+  const menuList = document.getElementById("menuList");
+  const closeBtn = document.getElementById("closeBtn");
+
+  menuBtn.addEventListener("click", () => {
+    menuList.classList.remove("hidden");
+    menuList.classList.add("flex");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menuList.classList.remove("flex");
+    menuList.classList.add("hidden");
+  });
+</script>

@@ -14,6 +14,10 @@ module.exports = {
       'Josefin-Sans': ['Josefin Sans', 'sans-serif'],
     },
     extend: {
+      backgroundImage: {
+        'desktop-hero-pattern': "url('/images/desktop/image-hero.jpg')",
+        'mobile-hero-pattern': "url('/images/mobile/image-hero.jpg')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
