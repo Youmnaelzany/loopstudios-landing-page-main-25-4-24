@@ -11,7 +11,9 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./public/images/Screenshot%202024-04-26%20at%2020-45-21%20Frontend%20Mentor%20Loopstudios%20landing%20page.png)
+![](./public/images/Screenshot%202024-04-26%20at%2020-45-37%20Frontend%20Mentor%20Loopstudios%20landing%20page.png)
+![](./public/images/Screenshot%202024-04-26%20at%2020-47-35%20Frontend%20Mentor%20Loopstudios%20landing%20page.png)
 
 ### Links
 
