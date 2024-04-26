@@ -2,14 +2,16 @@
 import Header from "@/components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
+import Footer from "@/components/Footer.astro";
 ---
 
 <Layout title="Frontend Mentor | Loopstudios landing page">
+  <!-- Header -->
   <Header />
-  <main>
+  <main class="">
     <!-- The Experiences  -->
     <section
-      class="mx-6 mt-[10.91rem] border-2 border-solid border-[#fff] p-6 xl:mt-[8.13rem] xl:w-[40.625rem]"
+      class="mx-6 mt-[10.91rem] border-2 border-solid border-[#fff] p-6 xl:mx-[10.31rem] xl:mt-[8.13rem] xl:w-[40.625rem]"
     >
       <h1
         class="font-Josefin-Sans text-[2.5rem] font-light uppercase leading-[2.375rem] text-[#fff] xl:w-[37.625rem] xl:p-10 xl:text-[4.5rem] xl:leading-[4.375rem]"
@@ -19,7 +21,7 @@ import "@/styles/globals.css";
     </section>
     <!-- VR Leader -->
     <section
-      class="relative mx-6 mt-[20rem] flex flex-col gap-12 xl:mt-[15.5rem] xl:flex-row"
+      class="relative mx-6 mt-[20rem] flex flex-col gap-12 xl:mx-[10.31rem] xl:mt-[15.5rem] xl:flex-row"
     >
       <picture>
         <source
@@ -48,20 +50,36 @@ import "@/styles/globals.css";
     </section>
     <!-- Our Creations -->
     <section
-      class="mx-6 mt-24 flex flex-col items-center gap-12 text-center xl:items-start xl:text-left"
+      class="mx-6 mt-24 flex flex-col items-center gap-12 text-center xl:mx-[10.31rem] xl:items-start xl:text-left"
     >
-      <h2
-        class="xl:leading-[3rem ] font-Josefin-Sans text-[2rem] font-light uppercase leading-8 text-[#000] xl:text-[3rem]"
-      >
-        Our Creations
-      </h2>
+      <!-- Our Collection Title -->
+      <div class="flex items-center justify-between xl:gap-[32rem]">
+        <div class="">
+          <h2
+            class="font-Josefin-Sans text-[2rem] font-light uppercase leading-8 text-[#000] xl:text-[3rem] xl:leading-[3rem]"
+          >
+            Our Creations
+          </h2>
+        </div>
+        <!-- Button See All -->
+        <div
+          class="hidden h-10 w-[9.8125rem] border border-solid border-[#000] text-center transition-colors duration-500 ease-linear hover:bg-[#000] hover:text-[#fff] xl:flex xl:items-center xl:justify-center"
+        >
+          <a
+            href="/"
+            class="flex items-center justify-center text-sm font-normal uppercase leading-[0.875rem] tracking-[0.3125rem]"
+            >See All</a
+          >
+        </div>
+      </div>
+      <!-- The Collection -->
       <div class="grid grid-cols-1 gap-6 xl:grid-cols-4 xl:gap-[1.87rem]">
         <!-- Deep Earth -->
-        <div class="relative" id="">
+        <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/public/images/desktop/image-deep-earth.jpg"
+              srcset="/images/desktop/image-deep-earth.jpg"
             />
             <img
               src="/images/mobile/image-deep-earth.jpg"
@@ -71,14 +89,23 @@ import "@/styles/globals.css";
           </picture>
           <h3
             id=""
-            class="cardTitel absolute bottom-5 left-5 w-20 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-20 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
           >
             DEEP EARTH
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              id=""
+              class="cardTitel absolute bottom-5 left-5 w-20 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            >
+              DEEP EARTH
+            </h3>
+          </div>
         </div>
         <!-- Night Arcade -->
-        <div class="relative" id="">
+        <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
@@ -92,11 +119,20 @@ import "@/styles/globals.css";
           </picture>
           <h3
             id=""
-            class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
           >
             NIGHT ARCADE
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              id=""
+              class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            >
+              NIGHT ARCADE
+            </h3>
+          </div>
         </div>
         <!-- Soccer Team VR -->
         <div class="relative">
@@ -112,18 +148,26 @@ import "@/styles/globals.css";
             />
           </picture>
           <h3
-            class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:w-40 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:w-40 xl:text-[2rem] xl:leading-8"
           >
             Soccer Team VR
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:w-40 xl:text-[2rem] xl:leading-8"
+            >
+              Soccer Team VR
+            </h3>
+          </div>
         </div>
         <!-- The Grid -->
         <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/public/images/desktop/image-grid.jpg"
+              srcset="/images/desktop/image-grid.jpg"
             />
             <img
               src="/images/mobile/image-grid.jpg"
@@ -132,18 +176,26 @@ import "@/styles/globals.css";
             />
           </picture>
           <h3
-            class="cardTitel absolute bottom-5 left-5 w-20 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-20 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
           >
             The Grid
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              class="cardTitel absolute bottom-5 left-5 w-20 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            >
+              The Grid
+            </h3>
+          </div>
         </div>
         <!-- From Up Above -->
         <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/public/images/desktop/image-from-above.jpg"
+              srcset="/images/desktop/image-from-above.jpg"
             />
             <img
               src="/images/mobile/image-from-above.jpg"
@@ -152,18 +204,26 @@ import "@/styles/globals.css";
             />
           </picture>
           <h3
-            class="cardTitel absolute bottom-5 left-5 w-36 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:w-44 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-36 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:w-44 xl:text-[2rem] xl:leading-8"
           >
             From Up Above VR
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              class="cardTitel absolute bottom-5 left-5 w-36 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:w-44 xl:text-[2rem] xl:leading-8"
+            >
+              From Up Above VR
+            </h3>
+          </div>
         </div>
         <!-- Pocket Borealis -->
         <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/public/images/desktop/image-pocket-borealis.jpg"
+              srcset="/images/desktop/image-pocket-borealis.jpg"
             />
             <img
               src="/images/mobile/image-pocket-borealis.jpg"
@@ -172,18 +232,26 @@ import "@/styles/globals.css";
             />
           </picture>
           <h3
-            class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
           >
             Pocket Borealis
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            >
+              Pocket Borealis
+            </h3>
+          </div>
         </div>
         <!-- The Curiosity -->
         <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/public/images/desktop/image-curiosity.jpg"
+              srcset="/images/desktop/image-curiosity.jpg"
             />
             <img
               src="/images/mobile/image-curiosity.jpg"
@@ -192,18 +260,26 @@ import "@/styles/globals.css";
             />
           </picture>
           <h3
-            class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
           >
             The Curiosity
           </h3>
-          <div class="cardOverlay absolute top-0 h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:text-[2rem] xl:leading-8"
+            >
+              The Curiosity
+            </h3>
+          </div>
         </div>
         <!-- MAKE IT FISHEYE -->
         <div class="relative">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/public/images/desktop/image-fisheye.jpg"
+              srcset="/images/desktop/image-fisheye.jpg"
             />
             <img
               src="/images/mobile/image-fisheye.jpg"
@@ -212,28 +288,53 @@ import "@/styles/globals.css";
             />
           </picture>
           <h3
-            class="cardTitel absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:w-36 xl:text-[2rem] xl:leading-8"
+            class="absolute bottom-5 left-5 w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#fff] xl:bottom-8 xl:left-10 xl:w-36 xl:text-[2rem] xl:leading-8"
           >
             MAKE IT FISHEYE
           </h3>
-          <div class="cardOverlay absolute top-0 hidden h-full w-full"></div>
+          <div
+            class="cardOverlay absolute top-0 h-full w-full transition-all duration-500 ease-linear"
+          >
+            <h3
+              class="cardTitel absolute bottom-5 left-5 hidden w-28 text-left font-Josefin-Sans text-2xl uppercase leading-6 text-[#000] xl:bottom-8 xl:left-10 xl:w-36 xl:text-[2rem] xl:leading-8"
+            >
+              MAKE IT FISHEYE
+            </h3>
+          </div>
         </div>
+      </div>
+      <!-- Button See All -->
+      <div
+        class="flex h-10 w-[9.8125rem] items-center justify-center border border-solid border-[#000] text-center transition-colors duration-500 ease-linear hover:bg-[#000] hover:text-[#fff] xl:hidden"
+      >
+        <a
+          href="/"
+          class="text-sm font-normal uppercase leading-[0.875rem] tracking-[0.3125rem]"
+          >See All</a
+        >
       </div>
     </section>
   </main>
-
-  <script is:inline>
-    let cardOverlay = document.getElementsByClassName("cardOverlay");
-    let cardTitel = document.getElementsByClassName("cardTitel");
-    for (let i = 0; i < cardOverlay.length; i++) {
-      cardOverlay[i].addEventListener("click", () => {
-        cardOverlay[i].classList.remove = "hidden";
-        cardOverlay[i].style.backgroundColor = "rgba(255, 255, 255, 0.75)";
-        cardTitel[i].style.color = "#000";
-      });
-      cardOverlay[i].addEventListener("click", () => {
-        cardOverlay[i].classList.add = "hidden";
-      });
-    }
-  </script>
+  <!-- Footer -->
+  <Footer />
 </Layout>
+
+<style>
+  .cardOverlay:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+</style>
+
+<script is:inline>
+  const cardOverlay = document.querySelectorAll(".cardOverlay");
+  const cardTitel = document.querySelectorAll(".cardTitel");
+  // Add hover effect
+  cardOverlay.forEach((item, index) => {
+    item.addEventListener("mouseover", () => {
+      cardTitel[index].classList.remove("hidden");
+    });
+    item.addEventListener("mouseout", () => {
+      cardTitel[index].classList.add("hidden");
+    });
+  });
+</script>
