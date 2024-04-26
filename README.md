@@ -17,10 +17,8 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Solution URL: [Add solution URL here](https://github.com/Youmnaelzany/loopstudios-landing-page-main-25-4-24.git)
+- Live Site URL: [Add live site URL here](https://loopstudioslandingpage254.netlify.app/)
 
 ### Built with
 
